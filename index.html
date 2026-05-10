@@ -1,0 +1,46 @@
+!DOCTYPE html
+html lang=zh-CN
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    title完整版 C++ 在线编程平台title
+    !-- 引入外部编译内核 + 样式 --
+    script src=httpscdn.jsdelivr.netnpm@monaco-editorbrowser-umd@0.44.0minvsloader.jsscript
+    link rel=stylesheet href=style.css
+head
+body
+
+!-- 左侧导航栏 --
+div class=sidebar
+    div class=nav-logo编程平台div
+    div class=nav-item active data-target=ide在线 C++ IDEdiv
+    div class=nav-item data-target=bank题库系统div
+div
+
+!-- 主内容区 --
+div class=main-wrap
+    !-- C++ IDE 页面 --
+    div class=page show id=page-ide
+        div class=ide-top
+            button class=run-btn id=runBtn运行代码button
+            span class=desc支持 intfloatdoublestring数组所有数学函数span
+        div
+        div class=ide-container
+            div id=codeEditordiv
+            div id=outputBox运行结果将在这里输出...div
+        div
+    div
+
+    !-- 题库 服务器错误页面 --
+    div class=page id=page-bank
+        div class=error-card
+            h2⚠️ 服务器连接错误h2
+            p请自行导入配置文件后重试p
+            button class=back-btn id=backBtn返回编程IDEbutton
+        div
+    div
+div
+
+script src=script.jsscript
+body
+html
